@@ -10,7 +10,15 @@ var Comment = mongoose.model("comments" , commentsSchema);
 
 exports.findComment = async(ctx) =>{
     // console.log(ctx.request.body.article)
-    let result = await Comment.find({article:ctx.request.body.articleId});
+    let result = await Comment.find({article:ctx.request.body.article});
+    console.log(result)
+    if(result){
+        ctx.body = {code:1,message:result}
+    }
+}
+exports.findCommentAll = async(ctx) =>{
+    // console.log(ctx.request.body.article)
+    let result = await Comment.find();
     console.log(result)
     if(result){
         ctx.body = {code:1,message:result}

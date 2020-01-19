@@ -19,6 +19,7 @@ router.post ('/updataRecords',require('../interface/postRecent').updataRecords);
 
 
 router.post ('/findComment',require('../interface/postComment').findComment);   //评论查询
+router.post ('/findCommentAll',require('../interface/postComment').findCommentAll); 
 router.post ('/saveComment',require('../interface/postComment').saveComment);
 router.post ('/remvoeComment',require('../interface/postComment').remvoeComment);
 
